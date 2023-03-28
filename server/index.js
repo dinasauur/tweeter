@@ -1,4 +1,4 @@
-"use strict";
+"use strict";                                          // This directive enabled JS's strict mode. It enforces stricter parsing and error handling on the code at runtime. 
 
 // Basic express setup:
 
@@ -8,7 +8,7 @@ const bodyParser    = require("body-parser");
 const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("public"));                      // Add a middleware for serving static files to your express app. This makes it possible to access files from folder via public.
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
