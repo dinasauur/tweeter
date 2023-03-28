@@ -9,7 +9,7 @@ nav {
   padding-right: 1.5em;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */
+  position: fixed; /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */ 
 }
 
 .write-new {
@@ -21,3 +21,4 @@ nav {
   align-self: center;
   color: orangered;
 }
+
