@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
 
   <!-- External JS -->
@@ -31,8 +32,8 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <div class="write-new">
-      <div>
+    <div class="right-side">
+      <div class="write-new">
         <b>Write</b> a new tweet
       </div>
       <div class="angle-icon">
@@ -54,7 +55,6 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <!-- a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text 

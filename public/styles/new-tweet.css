@@ -1,0 +1,40 @@
+.new-tweet {
+  align-self: center;
+  width: 65%;
+}
+
+label {
+  font-weight: normal;
+  font-style: italic;
+  font-size: normal;
+}
+
+#tweet-text {
+  border-bottom: solid;
+  background-color: #f4f1ec;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 80%; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-family: 'Bungee', cursive;
+  font-size: smaller;
+}
+
+button {
+  color: white;
+  background-color: #647d99;
+  border-radius: 7px;
+}
