@@ -21,10 +21,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-span {
-  font-family: 'Bungee', cursive;
-}
-
 main {
   display: flex;
   align-items: center;

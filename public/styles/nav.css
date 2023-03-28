@@ -12,12 +12,17 @@ nav {
   position: fixed; /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */ 
 }
 
-.write-new {
-  display: flex;
-  flex-direction: column;
+span {
+  font-family: 'Bungee', cursive;
 }
 
-.angle-icon {
+.right-side {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.fa-angles-down {
   align-self: center;
   color: orangered;
 }
