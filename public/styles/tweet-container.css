@@ -1,5 +1,37 @@
-/*Header section under article. Header has two children for the user handle*/
+/* Article has 3 children: header, p and footer */
+article {
+  width: 67%;
+  border: solid;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 200px;
+}
+
+article:hover {
+  box-shadow: 5px 5px 0px 0px #647d99;
+}
+
+/* Header section under article. Header has 2 children: 2 divs for the avatar/name and username */
 .tweet-container header {
   background-image: none;
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  height: 150px;
 }
+  
+
+/* p has no children. They have to be bordered up though, but only on the bottom */
+
+
+
+
+/* footer has 2 children: 2 div for the date and hover items */
+
+
+

@@ -1,12 +1,13 @@
 .new-tweet {
   align-self: center;
   width: 65%;
+  padding-bottom: 50px;
 }
 
 label {
   font-weight: normal;
   font-style: italic;
-  font-size: normal;
+  font-size: 21px;
 }
 
 #tweet-text {
@@ -18,6 +19,7 @@ label {
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 80%; 
+  height: 40px;
 }
 
 form {
