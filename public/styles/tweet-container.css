@@ -5,11 +5,15 @@ article {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  height: 200px;
+  height: 225px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color:#55595c;
 }
 
 article:hover {
   box-shadow: 5px 5px 0px 0px #647d99;
+  /* MAKE THE USERNAME CHANGE WHEN HOVERING ABOVE ARTICLE.username.color(#647d99); */
 }
 
 /* Header section under article. Header has 2 children: 2 divs for the avatar/name and username */
@@ -19,19 +23,53 @@ article:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
   height: 150px;
+  font-size: smaller;
 }
-  
+
+.username {
+  color:#9a9a9a;
+}
 
 /* p has no children. They have to be bordered up though, but only on the bottom */
-
-
-
+p {
+  padding: 15px;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  font-size: smaller;
+  font-weight: 600;
+}
 
 /* footer has 2 children: 2 div for the date and hover items */
+footer {
+  border-top: solid;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  font-size: 13px;
+}
 
+/* footer div has 3 children: they are 3 different icons */
+/* More space between the icons */
+.icons {
+  color: #476990;
+  font-size: 15px;
+}
 
+.fa-flag:hover {
+  color: goldenrod;
+}
 
+.fa-retweet:hover {
+  color: goldenrod;
+}
+
+.fa-heart:hover {
+  color: goldenrod;
+}
