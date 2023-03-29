@@ -20,6 +20,12 @@ label {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 80%; 
   height: 40px;
+  resize: none;
+}
+
+/* This gets rid of the blue outline --> it is coming from the focus */
+#tweet-text:focus {
+  outline: none;
 }
 
 form {
