@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     // if user exceeds the 140 character limit, the counter should appear red, otherwise, it should always be the other color
     if (counter < 0) {
-      counterChild.css('color', 'red');
+      counterChild.css('color', '#B24926');
     } else {
       counterChild.css('color', 'rgb(88, 88, 88)');
     }
