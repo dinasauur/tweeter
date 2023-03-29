@@ -27,7 +27,7 @@ form {
   flex-direction: column;
 }
 
-div {
+form div {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
