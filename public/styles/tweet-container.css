@@ -62,14 +62,6 @@ footer {
   font-size: 15px;
 }
 
-.fa-flag:hover {
-  color: goldenrod;
-}
-
-.fa-retweet:hover {
-  color: goldenrod;
-}
-
-.fa-heart:hover {
+.icons i:hover {
   color: goldenrod;
 }
