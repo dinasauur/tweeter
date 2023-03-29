@@ -15,10 +15,8 @@ $(document).ready(function(){
     const counter = 140 - lengthOfTextValue;
 
     // get access to the sibling's child .counter by traversing up and down the DOM
-    // currently, you are on <textarea> element, there are two additional siblings <label> and <div>. We need to travel up to the parent <form> and back down to the <div> child and then get to the child <output>
-    const parent = $(this).closest('.form');
-    const sibling = parent.find('.div-button-output');
-    const counterChild = sibling.find('.counter');
+    // currently, you are on <textarea> element, there are two additional siblings <label> and <div>. We need to travel up to the parent <form> and back down to the grandchild <output>.
+    const counterChild = $(this).closest('.form').find('.counter');
 
     // counterChild should count down as each character is input in the textarea
     // .text replaces the value of that element
