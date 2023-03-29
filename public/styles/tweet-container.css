@@ -1,0 +1,5 @@
+/*Header section under article. Header has two children for the user handle*/
+.tweet-container header {
+  background-image: none;
+  background-color: transparent;
+}
