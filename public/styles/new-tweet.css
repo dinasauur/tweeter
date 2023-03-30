@@ -5,6 +5,13 @@
   margin-top: 3%;
 }
 
+.error-messages {
+  display: flex;
+  border: solid;
+  color: red;
+  justify-content: center;
+}
+
 label {
   font-weight: normal;
   font-style: italic;
@@ -19,7 +26,7 @@ label {
   border-right: transparent;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 80%; 
+  font-size: 80%;
   height: 40px;
   resize: none;
 }

@@ -34,6 +34,7 @@
 
 // function prevents XSS with escaping, what it does is <script> would be converted to &lt;script&gt;. 
 // The HTML tag would then be visible to the user, but not evaluated as a tag by the browser.
+// It takes in a string argument and returns the escaped HTML equivalent of the string.
 const esc = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -129,12 +130,18 @@ $(document).ready(function() {
     //if statements to handle empty strings or over character limit for the textarea
     const tweetLength = $('#tweet-text').val().length;
 
+    if (tweetLength) {
+      $('.error-messages').slideUp();
+    }
+    
     if (tweetLength > 140) {
-      alert(`Too much. Reduce characters plis.`);
+      $('.error-messages').text(`Too much. Reduce characters plis.`).slideDown();
+      return;
     }
 
     if (tweetLength <= 0) {
-      alert(`Too little. Type something.`);
+      $('.error-messages').text(`Too little. Type something plis.`).slideDown();
+      return;
     }
 
     // ajax method is used to send the POST request to the server
