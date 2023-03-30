@@ -31,6 +31,10 @@ main {
   padding-top: 10px;
 }
 
+#tweets-container {
+  width: 100%
+}
+
 
 
 /*

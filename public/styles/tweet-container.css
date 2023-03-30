@@ -1,6 +1,6 @@
 /* Article has 3 children: header, p and footer */
 article {
-  width: 67%;
+  width: 100%;
   border: solid;
   display: flex;
   justify-content: flex-start;
@@ -53,6 +53,11 @@ footer {
   padding-right: 15px;
   padding-top: 7px;
   font-size: 13px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
 }
 
 /* footer div has 3 children: they are 3 different icons */
