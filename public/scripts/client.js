@@ -32,6 +32,14 @@
 //   }
 // ];
 
+// function prevents XSS with escaping, what it does is <script> would be converted to &lt;script&gt;. 
+// The HTML tag would then be visible to the user, but not evaluated as a tag by the browser.
+const esc = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 // function creates HTML markup using template literals and returns it to the caller
 const createTweetElement = function(data) {
 
@@ -47,7 +55,7 @@ const createTweetElement = function(data) {
         </div>
         <div class="username">${data.user.handle}</div>
       </header>
-      <p>${data.content.text}</p>
+      <p>${esc(data.content.text)}</p>
       <footer>
         <div>${time}</div> 
         <div class="icons">
