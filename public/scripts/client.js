@@ -32,7 +32,12 @@
 //   }
 // ];
 
+// function creates HTML markup using template literals and returns it to the caller
 const createTweetElement = function(data) {
+
+  // Use the timeago.format method to display the time passed since a tweet was created
+  const time = timeago.format(data.created_at, "en_US");
+
   const $tweet = $(`
   <article class="tweet-container">
       <header>
@@ -44,7 +49,7 @@ const createTweetElement = function(data) {
       </header>
       <p>${data.content.text}</p>
       <footer>
-        <div>${data.created_at}</div> 
+        <div>${time}</div> 
         <div class="icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-sharp fa-solid fa-retweet"></i>
@@ -57,18 +62,19 @@ const createTweetElement = function(data) {
   return $tweet; // returns the article element
 };
 
+// function takes in an array of objects, calls the createTweetElement which returns the article element and render them to DOM
 const renderTweets = function(tweets) {
   // loops through tweets
   tweets.forEach(userInfo => {
 
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+    // calls createTweetElement for each tweet, takes return value and appends it to the tweets-container
     const $returnedTweet = createTweetElement(userInfo);
-    $('#tweets-container').append($returnedTweet);
+    $('#tweets-container').prepend($returnedTweet);
   });
 };
 
-// this function uses jQuery to make a request to /tweets and receive the array of tweets as JSON
+// this function uses jQuery to make a request to /tweets/ and receive the array of tweets as JSON
+// the success callback function calls up renderTweets function and passes it the response from the AJAX request
 const loadTweets = function() {
   // ajax method to fetch(GET) data from the server
   $.ajax({
@@ -79,12 +85,29 @@ const loadTweets = function() {
     .then(function(data) {
       renderTweets(data);
     });
-  // .catch(function(error) {
-  //   console.log(error);
-  // })
+};
+
+// this function pulls the last item of the array from /tweets/ and creates the article element by calling crateTweetElement function
+// and then takes the returned value and appends it to the #tweets-container to the top
+// this is so that we don't have to keep refreshing thr browser to see the new tweet added
+const addNewTweet = function() {
+  $.ajax({
+    method: "GET",
+    url: "/tweets/",
+  })
+    .then(function(data) {
+      // Get the last item of the array (because when a tweet is submitted, the tweet gets added inside the array as the last item)
+      const index = data.length - 1;
+      // Grab the newly created tweet and add it on top of the tweet-container
+      $("#tweets-container").prepend(createTweetElement(data[index]));
+    });
 };
 
 $(document).ready(function() {
+
+  // call the loadTweets function so it shows the tweets that were previously submitted
+  loadTweets();
+
   // Use jQuery library to add event listener for "submit"
   $('.form').on('submit', function(event) {
 
@@ -95,19 +118,29 @@ $(document).ready(function() {
     // serialize the data coming from the form and send it to the server as a query string
     const input = $("#tweet-text").serialize();
 
+    //if statements to handle empty strings or over character limit for the textarea
+    const tweetLength = $('#tweet-text').val().length;
+
+    if (tweetLength > 140) {
+      alert(`Too much. Reduce characters plis.`);
+    }
+
+    if (tweetLength <= 0) {
+      alert(`Too little. Type something.`);
+    }
+
     // ajax method is used to send the POST request to the server
     $.ajax({
       method: "POST",
       url: "/tweets/",
       data: input,
     })
-      .then(function(data) {
-        console.log(data);
+      .then(function() {
+        // clear what was written
+        $('#tweet-text').val("");
+        // counter resets
+        $('.counter').val(140);
+        addNewTweet();
       });
-    // .catch(function(error){
-    //   console.log(error);
-    // });
   });
-
-  loadTweets();
 });
