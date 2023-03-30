@@ -49,8 +49,10 @@ $(document).ready(function(){
     const $tweet = $(`
     <article class="tweet-container">
         <header>
-          <img src="${data.user.avatars}"/>
-          <div>${data.user.name}</div>
+          <div class="image-container">
+            <img src="${data.user.avatars}"/>
+            <div>${data.user.name}</div>
+          </div>
           <div class="username">${data.user.handle}</div>
         </header>
         <p>${data.content.text}</p>
