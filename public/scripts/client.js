@@ -32,43 +32,43 @@ const data = [
   }
 ];
 
-$(document).ready(function(){
-  const renderTweets = function(tweets) {
-    // loops through tweets
-    tweets.forEach(userInfo => {
-  
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
-      const $returnedTweet = createTweetElement(userInfo);
-      $('#tweets-container').append($returnedTweet);
-    });
-  
-  };
-  
-  const createTweetElement = function(data) {
-    const $tweet = $(`
-    <article class="tweet-container">
-        <header>
-          <div class="image-container">
-            <img src="${data.user.avatars}"/>
-            <div>${data.user.name}</div>
-          </div>
-          <div class="username">${data.user.handle}</div>
-        </header>
-        <p>${data.content.text}</p>
-        <footer>
-          <div>${data.created_at}</div> 
-          <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-sharp fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    `);
-  
-    return $tweet; // returns the article element
-  };
-  
+const renderTweets = function(tweets) {
+  // loops through tweets
+  tweets.forEach(userInfo => {
+
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+    const $returnedTweet = createTweetElement(userInfo);
+    $('#tweets-container').append($returnedTweet);
+  });
+
+};
+
+const createTweetElement = function(data) {
+  const $tweet = $(`
+  <article class="tweet-container">
+      <header>
+        <div class="image-container">
+          <img src="${data.user.avatars}"/>
+          <div>${data.user.name}</div>
+        </div>
+        <div class="username">${data.user.handle}</div>
+      </header>
+      <p>${data.content.text}</p>
+      <footer>
+        <div>${data.created_at}</div> 
+        <div class="icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-sharp fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>
+  `);
+
+  return $tweet; // returns the article element
+};
+
+$(document).ready(function(){  
   renderTweets(data);
 });
