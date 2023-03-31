@@ -1,15 +1,15 @@
-
 nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #4a4e69;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */ 
+  position: fixed;
+  /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */
 }
 
 span {
@@ -24,6 +24,15 @@ span {
 
 .fa-angles-down {
   align-self: center;
-  color: orangered;
+  color: #b392ac;
 }
 
+@media only screen and (max-width: 1023px) {
+  nav {
+    background-color: transparent;
+    position: unset;
+    background-color: #735d78;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+    /* height: 1%; */
+  }
+}

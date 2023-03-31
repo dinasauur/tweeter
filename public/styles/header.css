@@ -1,12 +1,29 @@
-header {
-  height: 520px;
-  width: 100%;
+.main-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  padding-top: 120px;
-  background-color: #647d99;
-  /* background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  background-color: #735d78;
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  color: whitesmoke;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    width: 30%;
+    position: fixed;
+    height: 70%;
+    padding-bottom: 150px;
+    margin-left: 5%;
+    margin-top: 11.75%;
+    border-radius: 15%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .main-header {
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    line-height: 1px;
+  }
 }
