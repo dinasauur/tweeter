@@ -10,7 +10,6 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  /*nav-bar will always be in front of some content. This is called an overlaid nav-bar. Without this, if we scrolls down the page, the nav-bar would scroll up and off the page too." */
 }
 
 span {
@@ -34,6 +33,5 @@ span {
     position: unset;
     background-color: #735d78;
     background-image: url("https://www.transparenttextures.com/patterns/xv.png");
-    /* height: 1%; */
   }
 }

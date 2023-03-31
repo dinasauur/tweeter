@@ -1,4 +1,3 @@
-/* Article has 3 children: header, p and footer */
 article {
   width: 100%;
   border: solid;
@@ -16,7 +15,6 @@ article:hover {
   box-shadow: 5px 5px 0px 0px #b392ac;
 }
 
-/* Header section under article. Header has 2 children: 2 divs for the avatar/name and username */
 .tweet-container header {
   background-image: none;
   background-color: transparent;
@@ -26,7 +24,6 @@ article:hover {
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 1.5%;
-  /* height: 150px; */
   font-size: smaller;
 }
 
@@ -44,7 +41,6 @@ article:hover {
   font-weight: 600;
 }
 
-/* p has no children. They have to be bordered up though, but only on the bottom */
 p {
   padding-left: 1em;
   padding-right: 1em;
@@ -55,7 +51,6 @@ p {
   overflow-wrap: break-word;
 }
 
-/* footer has 2 children: 2 div for the date and hover items */
 footer {
   border-top: solid;
   border-top-width: medium;
@@ -68,8 +63,6 @@ footer {
   font-size: 13px;
 }
 
-/* footer div has 3 children: they are 3 different icons */
-/* More space between the icons */
 .icons {
   color: #735d78;
   font-size: 15px;

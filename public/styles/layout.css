@@ -30,7 +30,6 @@ main {
   flex-direction: column;
   width: 90%;
   background-color: body;
-  /* margin: 0 auto; */
   padding-top: 10px;
   flex-grow: 2;
 }
@@ -42,7 +41,6 @@ main {
 @media only screen and (min-width: 1024px) {
   main {
     width: 60%;
-    /* float: right; */
     padding-top: 200px;
     padding-right: 60px;
   }
