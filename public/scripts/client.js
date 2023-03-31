@@ -135,12 +135,12 @@ $(document).ready(function() {
     }
     
     if (tweetLength > 140) {
-      $('.error-messages').text(`Too much. Reduce characters plis.`).slideDown();
+      $('.error-messages').text(`Character limit exceeded. Please try again.`).slideDown();
       return;
     }
 
     if (tweetLength <= 0) {
-      $('.error-messages').text(`Too little. Type something plis.`).slideDown();
+      $('.error-messages').text(`There is nothing to tweet. Please try again.`).slideDown();
       return;
     }
 
