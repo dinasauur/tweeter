@@ -22,12 +22,11 @@ Tweeter is a simple, single-page Twitter clone that uses jQuery, HTML5 and CSS t
 ## Quick Glance at Final Product
 
 1. Large Screen View
-https://github.com/dinasauur/tweeter/blob/master/docs/Large%20Screen.png?raw=true
+!["Screenshot of Large Screen View"](https://github.com/dinasauur/tweeter/blob/master/docs/Large%20Screen.png?raw=true)
 
 2. Phone Screen View
-https://github.com/dinasauur/tweeter/blob/master/docs/Phone%20Screen.png?raw=true
+!["Screenshot of Phone Screen View"](https://github.com/dinasauur/tweeter/blob/master/docs/Phone%20Screen.png?raw=true)
 
-3. Error Messages 
-https://github.com/dinasauur/tweeter/blob/master/docs/Error%20-%20Empty%20Tweet.png?raw=true
-https://github.com/dinasauur/tweeter/blob/master/docs/Error%20-%20Character%20Limit.png?raw=true
-
+3. Error Messages
+!["Screenshot of Empty Error Message](https://github.com/dinasauur/tweeter/blob/master/docs/Error%20-%20Empty%20Tweet.png?raw=true)
+!["Screenshot of Character Limit Error Message"](https://github.com/dinasauur/tweeter/blob/master/docs/Error%20-%20Character%20Limit.png?raw=true)
