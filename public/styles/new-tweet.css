@@ -14,6 +14,8 @@
   border-radius: 10px;
 }
 
+/* Do I write jquery for this? ( if #tweet-text length is true, hide the label?)
+Or can I erase the label and make this as a placeholder */
 label {
   font-weight: bold;
   font-style: normal;
@@ -29,8 +31,11 @@ label {
   border-right: transparent;
   width: 100%;
   font-size: 80%;
-  height: 40px;
   resize: none;
+}
+
+#tweet-text[placeholder] {
+  font-weight: bold;
 }
 
 /* This gets rid of the blue outline --> it is coming from the focus */

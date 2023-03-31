@@ -1,21 +1,18 @@
 .main-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #735d78;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
   color: whitesmoke;
+  flex-grow: 1;
 }
 
 @media only screen and (min-width: 1024px) {
   .main-header {
-    width: 30%;
-    position: fixed;
-    height: 70%;
-    padding-bottom: 150px;
-    margin-left: 5%;
-    margin-top: 11.75%;
+    padding: 50px;
+    margin: 150px 50px;
     border-radius: 15%;
   }
 }
@@ -25,5 +22,6 @@
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
     line-height: 1px;
+    width: 100vw;
   }
 }

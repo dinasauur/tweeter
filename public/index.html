@@ -63,10 +63,10 @@
     <section class="new-tweet">
       <div class="error-messages" style="display: none;">Error</div>
       <form action="/tweets/" method="POST" class="form">
-        <label for="tweet-text">What are you humming about?</label>
+        <!-- <label for="tweet-text">What are you humming about?</label> -->
         <!-- a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text 
             for example a comment on a review or feedback form-->
-        <textarea name="text" id="tweet-text"></textarea>
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="div-button-output">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
