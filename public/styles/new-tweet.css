@@ -7,25 +7,27 @@
 
 .error-messages {
   display: flex;
-  border: solid;
-  color: red;
   justify-content: center;
+  border: solid;
+  color: #b5838d;
+  border-block-color: #b5838d;
+  border-radius: 10px;
 }
 
 label {
-  font-weight: normal;
-  font-style: italic;
+  font-weight: bold;
+  font-style: normal;
   font-size: 21px;
 }
 
 #tweet-text {
   border-bottom: solid;
+  border-bottom-width: medium;
   background-color: #f4f1ec;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
   width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 80%;
   height: 40px;
   resize: none;
@@ -51,6 +53,6 @@ form div {
 
 button {
   color: white;
-  background-color: #647d99;
+  background-color: #735d78;
   border-radius: 7px;
 }

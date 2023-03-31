@@ -2,19 +2,19 @@
 article {
   width: 100%;
   border: solid;
+  border-width: medium;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   height: 250px;
   padding-left: 10px;
   padding-right: 10px;
-  color:#55595c;
-  margin-top: 2%;
+  color: #55595c;
+  margin-top: 4%;
 }
 
 article:hover {
-  box-shadow: 5px 5px 0px 0px #647d99;
-  /* MAKE THE USERNAME CHANGE WHEN HOVERING ABOVE ARTICLE.username.color(#647d99); */
+  box-shadow: 5px 5px 0px 0px #b392ac;
 }
 
 /* Header section under article. Header has 2 children: 2 divs for the avatar/name and username */
@@ -24,9 +24,9 @@ article:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 1%;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1.5%;
   height: 150px;
   font-size: smaller;
 }
@@ -36,22 +36,30 @@ article:hover {
   align-items: center;
 }
 
+.image-container div {
+  margin-left: 10px;
+}
+
 .username {
-  color:#9a9a9a;
+  color: #c7cccb;
+  font-weight: 600;
 }
 
 /* p has no children. They have to be bordered up though, but only on the bottom */
 p {
-  padding: 15px;
-  padding-bottom: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
   margin-top: 2%;
   font-size: smaller;
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 
 /* footer has 2 children: 2 div for the date and hover items */
 footer {
   border-top: solid;
+  border-top-width: medium;
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
@@ -64,10 +72,14 @@ footer {
 /* footer div has 3 children: they are 3 different icons */
 /* More space between the icons */
 .icons {
-  color: #476990;
+  color: #735d78;
   font-size: 15px;
 }
 
+.icons i {
+  margin-left: 10px;
+}
+
 .icons i:hover {
-  color: goldenrod;
+  color: #b392ac;
 }
