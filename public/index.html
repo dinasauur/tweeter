@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
@@ -24,12 +25,12 @@
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
-<!-- When you want to use a library for the front-end of a project, use a <script> tag in the html file that downloads the library when the browser loads the web page -->
+  <!-- When you want to use a library for the front-end of a project, use a <script> tag in the html file that downloads the library when the browser loads the web page -->
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
-  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -47,13 +48,13 @@
     </div>
   </nav>
 
-  <header>
+  <header class=" main-header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
     <br> <!-- br means a line break -->
     <div>
-      <h2>Your Name</h2>
+      <h2>Wendina Teng</h2>
     </div>
   </header>
 
@@ -64,7 +65,7 @@
       <form action="/tweets/" method="POST" class="form">
         <label for="tweet-text">What are you humming about?</label>
         <!-- a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text 
-          for example a comment on a review or feedback form-->
+            for example a comment on a review or feedback form-->
         <textarea name="text" id="tweet-text"></textarea>
         <div class="div-button-output">
           <button type="submit">Tweet</button>
